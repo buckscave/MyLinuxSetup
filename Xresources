@@ -1,0 +1,30 @@
+! Use white-on-black colors
+XTerm.vt100.reverseVideo: false
+UXTerm.vt100.reverseVideo: false
+
+! XTerm already has 256 colors support
+! We ask it to set the correct $TERM
+XTerm.termName: xterm-256color
+UXTerm.termName: xterm-256color
+
+! Number of lines to save for scrolling
+XTerm.vt100.saveLines: 100000
+UXTerm.vt100.metaSendsEscape: true
+
+! Appearances
+XTerm*renderFont:	true
+XTerm*faceName:	DroidSansMonoForPowerline
+XTerm*faceSize:	8
+XTerm*background:  black
+XTerm*foreground:  grey90
+
+UXTerm*renderFont:	true
+UXTerm*faceName:	DroidSansMonoForPowerline
+UXTerm*faceSize:	8
+UXTerm*background:  black
+UXTerm*foreground:  grey90
+
+
+XTerm*VT100.*translations:      #override \n\
+        Shift Ctrl<Key>C: copy-selection(CLIPBOARD, CUT_BUFFER0) \n\
+        Shift Ctrl<Key>V: insert-selection(CLIPBOARD, CUT_BUFFER0) 
